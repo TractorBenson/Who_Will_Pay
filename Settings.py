@@ -59,8 +59,8 @@ class Settings(Page):
 
     def save_settings(self):
         names = self.names_entry.get().split(",")
-        for name in names:
-            name = name.strip()
+        for i in range(len(names)):
+            names[i] = names[i].strip()
         exponent = self.exponent_entry.get()
         try:
             exponent = float(exponent)
