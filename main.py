@@ -4,6 +4,26 @@ from NextPaymentPage import NextPaymentPage
 from DataDisplayPage import DataDisplayPage  
 from Settings import Settings
 
+import os
+import json
+
+# Ensure data file exists with default structure
+DATA_FILE = 'data.json'
+if not os.path.exists(DATA_FILE):
+    with open(DATA_FILE, 'w') as f:
+        json.dump([], f)
+
+SETTINGS_FILE = 'settings.json'
+DEFAULT_SETTINGS = {
+    "names": [],
+    "penalty_exponent": 3.0
+}
+
+# Ensure settings file exists with default structure
+if not os.path.exists(SETTINGS_FILE):
+    with open(SETTINGS_FILE, 'w') as f:
+        json.dump(DEFAULT_SETTINGS, f, indent=4)
+
 ### Main App
 class App(tk.Tk):
     def __init__(self):

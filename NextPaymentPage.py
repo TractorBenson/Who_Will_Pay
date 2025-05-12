@@ -120,7 +120,7 @@ class Wheel(tk.Canvas):
             effective_angle -= self.segments[segment]
 
         self.create_text(self.center[0], self.center[1],
-                         text=f"Winner: {winner}", font=("Arial", 20, "bold"), fill = "white")
+                         text=f"Payer: {winner}", font=("Arial", 20, "bold"), fill = "white")
 
 class CalculatePosi():
     def __init__(self):

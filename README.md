@@ -5,7 +5,7 @@
 ---
 
 > **⚠️ Legacy notice:**  
-> This is the first implementation (v1.0) using Tkinter and JSON for storage.  
+> This is the first implementation (v1.2) using Tkinter and JSON for storage.  
 > For the latest web-based version (v2.0) with Flask, SQLite, and Chart.js, see:  
 > https://github.com/20age1million/Who-Will-Pay-Expense-Tracker  
 
@@ -57,5 +57,10 @@ It runs as a desktop GUI application and stores data in a local JSON file.
    python main.py
    ```
 4. **Data file**
-   - On first run, a **data.json** will be created in the working directory.
-   - You can manually open or edit data.json to inspect or modify stored records—just keep valid JSON syntax.
+   - On first run, a **data.json** and **setting.json** will be created in the working directory.
+   - You can manually open or edit **data.json** and **setting.json** to inspect or modify stored records and settings—just keep valid JSON syntax.
+5. **Usage**
+   - On first run, open **Settings** page, enter the names to track (separated by commas), and save.
+   - Restart the application. The **Next Payment** and **Write New Payment** pages will now function correctly.
+   - The **Data Display** page will become available after recording your first payment on the **Write New Payment** page.
+   - The **penalty_exponent** setting controls the weighting for the next payer selection: a higher exponent increases the disparity between participants’ probabilities. 
